@@ -4,7 +4,7 @@
 This website teaches GenAI for users who may be new to GenAI. In this website, it answered FAQs about AI, the ethical uses of AI, and a short analogy on the use of AI in dev work.
 
 ## Instructions on how to run the project:
-The website offers its users easy way to navigate throughtout the website, thanks to its navigation bar located above. Added common GenAI doodles in the home page that when clicked, it will direct u into the GenAI's website. In the leftside of the navigation bar, there are buttons that lead to the home page, FAQs page, ethics page, and the article page.
+The website offers its users easy way to navigate throughtout the website, thanks to its navigation bar located above. Added common GenAI doodles in the home page that when clicked, it will direct u into the GenAI's website. In the leftside of the navigation bar, there are buttons that lead to the home page, FAQs page, ethics page, and the article page. I also added a simple FAQ submisson tab below in the FAQs page to help collect questions.
 
 ## Framework/libraries used:
 Bootstrap and Visual Studio Code
