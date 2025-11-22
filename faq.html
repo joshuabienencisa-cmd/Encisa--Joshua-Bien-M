@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css.files/index.css">
+    <link rel="stylesheet" href="assets/css.files/faq.css">
+</head>
+<body>
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <div class="container-fluid d-flex align-items-center">
+                <a class="navbar-brand me-0" href="index.html" style="color:#000;">Generative AI</a>
+                <div class="navbar-nav d-flex flex-row align-items-center ms-3">
+                    <a class="nav-link px-2" aria-current="page" href="index.html" style="color:#000;">Home</a>
+                    <a class="nav-link px-2" href="faq.html" style="color:#000;">FAQ's</a>
+                    <a class="nav-link px-2" href="ethics.html" style="color:#000;">Ethics</a>
+                    <a class="nav-link px-2" href="article.html" style="color:#000;">Article</a>
+                </div>
+            </div>
+        </nav>
+
+    <h1>Frequently Asked Questions about Generative AI</h1>
+
+    <div class="faq-item">
+        <h2 class="faq-question">What is Generative AI?</h2>
+        <p class="faq-answer">Generative artificial intelligence (generative AI) is a type of AI that can create new content and ideas, including conversations, stories, images, videos, and music. It can learn human language, programming languages, art, chemistry, biology, or any complex subject matter. It reuses what it knows to solve new problems.</p>
+        <h2 class="faq-question">How does it work?</h3>
+        <p class="faq-answer">It’s basically a machine that is capable of doing most of the things the human can also do. Generative AI is beneficial since they can accomplish tasks much faster than humans. If they are given a certain prompt, it can be a democrat for those who don’t speak English as their first language.</p>
+        <h2 class="faq-question">What are examples of GenAI tools?</h2>
+        <p class="faq-answer">Examples of GenAI can be categorized by text-generation, image-generation, video-generation, music-generation, code generation, and productivity tools. Examples for text-generation are ChatGPT, Gemini, Claude. Examples for image-generation are Adobe Firefly and DALL-E. Examples for video-generation are Pika Labs and Lumen5. Examples for music generation are Voicemod AI and Suno AI. An example for code generation is Github Copilot. Examples of productivity tools are Notion AI and GrammarlyGO.</p>
+        <h2 class="faq-question">What can GenAI do (strengths)?</h2>
+        <p class="faq-answer">GenAI can generate essays, answer questions in seconds. It can make images, videos, and music and by that it can help people with creative work. It can also explain any lessons, fix grammar, and assist with coding. Basically GenAI is very useful for saving time.</p>
+        <h2 class="faq-question">What are its limitations or risks?</h2>
+        <p class="faq-answer">Generative AI can sometimes produce incorrect or nonsensical answers, known as "hallucinations." It may also generate biased or harmful content if trained on biased data. Additionally, there are concerns about privacy, security, and the ethical use of AI-generated content.</p>
+        <h2 class="faq-question">References:</h2>
+        <ul class="faq-references">
+            <li><a href="https://aws.amazon.com/what-is/generative-ai/" target="_blank" rel="noopener">What is generative AI — AWS</a></li>
+            <li><a href="https://generative-ai.leeds.ac.uk/intro-gen-ai/strengths-and-weaknesses/" target="_blank" rel="noopener">Strengths & weaknesses — University of Leeds</a></li>
+            <li><a href="https://www.forbes.com/sites/cindygordon/2024/02/25/ai-is-accelerating-the-loss-of-our-scarcest-natural-resource-water/" target="_blank" rel="noopener">AI and water scarcity — Forbes</a></li>
+        </ul>
+        <h2 class="faq-question">Any other FAQs you want to add.</h2>
+
+        <form id="simple-faq-form" style="margin-top:8px;">
+            <input id="q" type="text" placeholder="Your question" style="width:60%;padding:6px" required>
+            <input id="a" type="text" placeholder="Short answer (optional)" style="width:30%;padding:6px;margin-left:6px;">
+            <button type="submit" style="margin-left:6px;padding:6px 10px;">Add</button>
+        </form>
+
+        <div id="user-faqs" style="margin-top:12px;"></div>
+
+        <script>
+            document.getElementById('simple-faq-form').addEventListener('submit', function(e){
+                e.preventDefault();
+                var qEl = document.getElementById('q');
+                var aEl = document.getElementById('a');
+                var q = qEl.value.trim();
+                var a = aEl.value.trim();
+                if (!q) { qEl.focus(); return; }
+                var h = document.createElement('h2');
+                h.className = 'faq-question';
+                h.textContent = q;
+                var p = document.createElement('p');
+                p.className = 'faq-answer';
+                p.textContent = a || 'Answer will be added later.';
+                var container = document.getElementById('user-faqs');
+                container.appendChild(h);
+                container.appendChild(p);
+                qEl.value = '';
+                aEl.value = '';
+                qEl.focus();
+            });
+        </script>
+    </div>
+</body>
+</html>
