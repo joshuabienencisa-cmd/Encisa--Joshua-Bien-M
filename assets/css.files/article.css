@@ -1,0 +1,35 @@
+.article-item {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+.article-item .article-question {
+    text-align: justify;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.article-item .article-answer {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+    .faq-item { padding-left: 0; padding-right: 0; }
+}
+.article-references {
+    margin: 8px 0 16px 18px;
+    padding: 0;
+}
+.article-references li {
+    margin-bottom: 6px;
+}
+.article-references a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+.article-references a:hover {
+    text-decoration: underline;
+}
